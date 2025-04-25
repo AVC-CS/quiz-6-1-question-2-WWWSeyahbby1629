@@ -1,15 +1,15 @@
+#include <iostream>
 #include "main.hpp"
 
-int main()
-{
+int main() {
 
-    string filename;
-    int empN;
+    int numEmployees = writeFile();
 
-    filename = "employee.txt";
-    empN = writeFile(filename);
-    cout << "File created with " << empN << " employee records\n";
+    cout << "\nNumber of employees saved: " << numEmployees << endl;
 
-    empN = readFile(filename);
-    cout << "The total number of employess read " << empN << endl;
+    int numEmployeesRead = readFile();
+
+    cout << "\nNumber of employees read from file: " << numEmployeesRead << endl;
+
+    return 0;
 }
